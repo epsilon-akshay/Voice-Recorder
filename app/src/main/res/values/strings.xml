@@ -2,4 +2,5 @@
     <string name="app_name">VoiceRecorder</string>
     <string name="stop">stop</string>
     <string name="play">play</string>
+    <string name="list">list</string>
 </resources>
