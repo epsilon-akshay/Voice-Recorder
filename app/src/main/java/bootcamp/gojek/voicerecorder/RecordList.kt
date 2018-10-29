@@ -18,10 +18,8 @@ class RecordList : AppCompatActivity() {
         val listFile: Array<File> = dir.listFiles()
         val records = ArrayList<String>()
         for(i in (0..listFile.size - 1)) {
-            records.add(listFile[i].absolutePath)
-            Log.d("hihihihihiihihihihii",records[i])
+            records.add(listFile[i].absolutePath.substring(listFile[i].absolutePath.lastIndexOf("/")+1))
         }
-        Log.d("hihihiih",records.size.toString())
         recordingList.layoutManager = LinearLayoutManager(this)
         recordingList.adapter = RecordingAdapter(records)
     }

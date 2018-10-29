@@ -26,11 +26,10 @@ class RecordingAdapter(private val records: ArrayList<String>): RecyclerView.Ada
     class ViewHolder(val buttonView: View) : RecyclerView.ViewHolder(buttonView) {
         fun bindData(recordName: String) {
             val button = buttonView.findViewById<Button>(R.id.recording_button)
-            button.setText(recordName)
-
+            button.text = recordName
             button.setOnClickListener{
                 val newRecord = MediaPlayer()
-                newRecord.setDataSource(recordName)
+                newRecord.setDataSource( Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).absolutePath + "/" + recordName)
                 newRecord.prepare()
                 newRecord.start()
             }
