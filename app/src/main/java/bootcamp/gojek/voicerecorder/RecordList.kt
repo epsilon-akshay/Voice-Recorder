@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.os.Environment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import java.io.File
 
 class RecordList : AppCompatActivity() {
